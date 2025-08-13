@@ -17,8 +17,8 @@ public class Circle : MonoBehaviour {
 	public ParticleSystem WoodSplatParticle,BlueWoodSplatParticle;
 	[Space(20)]
 	public bool isRandomClockWise=false;
-
-	public List<Knife> hitedKnife= new List<Knife>();
+    private float knifeHeightByScreen = .1f;
+    public List<Knife> hitedKnife= new List<Knife>();
 	public AudioClip woodHitSfx,LasthitSfx;
 	int currentRoationIndex=0;
 	int currentLevelndex=0;
@@ -63,10 +63,14 @@ public class Circle : MonoBehaviour {
 			tempKnife.GetComponent<Knife> ().isFire = true;
 			tempKnife.GetComponents<BoxCollider2D> () [0].enabled = true;
 			tempKnife.GetComponents<BoxCollider2D> () [1].enabled = true;
-			setPosInCircle (transform, tempKnife.transform,item, 0.12f, 90f);
-			tempKnife.transform.localScale = new Vector3 (0.65f, 0.65f, 0.65f);
+			setPosInCircle (transform, tempKnife.transform,item, 0f, 90f);
+			float knifeScale = (GameManager.ScreenHeight * knifeHeightByScreen) / tempKnife.GetComponent<SpriteRenderer>().bounds.size.y;
+		//	tempKnife.transform.localScale = Vector3.one * knifeScale;
+			tempKnife.transform.localScale = new Vector3(0.65f, 0.65f, 0.65f);
+			//   tempKnife.transform.localScale = Vector3.one * knifeScale;
+
 		}
-	}
+    }
 	void setPosInCircle(Transform circle,Transform obj,float angle,float spaceBetweenCircleAndObject,float objAngelOffset)
 	{
 		angle = angle + 90f;
@@ -106,7 +110,7 @@ public class Circle : MonoBehaviour {
 			k.transform.SetParent (transform);
 			k.isHitted = true;
 			hitedKnife.Add (k);
-
+		k.transform.localScale = new Vector3(0.65f, 0.65f, 0.65f);
 			playParticle(k.transform.position,hitParticle);
 			LeanTween.moveLocalY (gameObject, 0.1f, 0.05f).setLoopPingPong(1);
 		if (hitedKnife.Count >= totalKnife) {
@@ -142,8 +146,9 @@ public class Circle : MonoBehaviour {
 		yield return new WaitForSeconds (0.02f);
 		foreach (Transform item in transform) {
 			//print (item.name);
-			if (item.transform.tag.Equals ("Knife")) {				
-				item.GetComponents<BoxCollider2D> ()[0].enabled = false;
+			if (item.transform.tag.Equals ("Knife")) {	
+				//item.transform.localScale = new Vector3(0.65f, 0.65f, 0.65f);
+                item.GetComponents<BoxCollider2D> ()[0].enabled = false;
 				item.GetComponents<BoxCollider2D> ()[1].enabled = false;
 
 				item.GetComponent<Knife> ().rb.isKinematic = false;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UniPay;
 
 public class GameManager : MonoBehaviour {
 
@@ -66,11 +67,16 @@ public class GameManager : MonoBehaviour {
 	{
 		get
 		{
-			return PlayerPrefs.GetInt ("Player's Apple", 0);
+			return PlayerPrefs.GetInt ("Player's Apple",DBManager.GetCurrency("coin"));
 		}
 		set
 		{
-			PlayerPrefs.SetInt ("Player's Apple", value);
+			
+			int coin = DBManager.GetCurrency("coin");
+            Debug.Log($"value:{coin}");
+            DBManager.SetCurrency("coin", value);
+            Debug.Log($"value2:{DBManager.GetCurrency("coin")}");
+            PlayerPrefs.SetInt("Player's Apple", value);
 			if (GeneralFunction.intance != null)
 				GeneralFunction.intance.appleLbl.text = GameManager.Apple + "";
 			

@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UniPay;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.UI;
-using System;
 
 public class MainMenu : MonoBehaviour 
 {
@@ -16,10 +18,10 @@ public class MainMenu : MonoBehaviour
 	public AudioClip giftSfx;
 	public GameObject m_Store;
 	public static MainMenu intance;
-
-	// Gift Setting
-
-	int timeForNextGift = 60*8;
+	public AudioClip myMusicClip;
+    // Gift Setting
+    public GameObject notification;
+    int timeForNextGift = 60*8;
 	int minGiftApple = 40;// Minimum Apple for Gift
 	int maxGiftApple = 70;// Maxmum Apple for Gift
 	void Awake()
@@ -30,13 +32,19 @@ public class MainMenu : MonoBehaviour
 	{
         CUtils.ShowInterstitialAd();
 		InvokeRepeating ("updateGiftStatus", 0f, 1f);
-		KnifeShop.intance.UpdateUI ();
+	//	KnifeShop.intance.UpdateUI ();
         m_Store.gameObject.SetActive (false);
-
+        SoundManager.instance.PlayBackgroundMusic(myMusicClip, 0.5f);
     }
 
 	public void OnPlayClick()
 	{
+		int coin = DBManager.GetCurrency("coin");
+		if (coin <= 0)
+		{
+			ShowMessage();
+			return;
+		}
 		SoundManager.instance.PlaybtnSfx ();
 		GeneralFunction.intance.LoadSceneWithLoadingScreen ("GameScene");
 	}
@@ -45,8 +53,20 @@ public class MainMenu : MonoBehaviour
 		SoundManager.instance.PlaybtnSfx ();
         CUtils.OpenStore();
 	}
+    public void ShowMessage()
+    {
 
-	void updateGiftStatus()
+        notification.SetActive(true);
+        StartCoroutine(HideAfterDelay(1f)); // 1 giây
+    }
+
+    IEnumerator HideAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        notification.SetActive(false);
+    }
+
+    void updateGiftStatus()
 	{
 		if (GameManager.GiftAvalible) {
 			giftButton.interactable = true;

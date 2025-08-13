@@ -1,9 +1,12 @@
 ﻿//using GoogleMobileAds.Api;
+using EasyMobile;
 using System.Collections;
 using System.Collections.Generic;
+using UniPay;
 using UnityEngine;
+using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using EasyMobile;
 
 public class GamePlayManager : MonoBehaviour {
 
@@ -54,6 +57,7 @@ public class GamePlayManager : MonoBehaviour {
 	Circle currentCircle;
 	Knife currentKnife;
 	bool usedAdContinue;
+	public GameObject notification;
 	public int totalSpawnKnife
 	{
 		get
@@ -67,6 +71,8 @@ public class GamePlayManager : MonoBehaviour {
 		}
 	}
 	int _totalSpawnKnife;
+
+	public GameObject store;
 
 	void Awake()
 	{	
@@ -120,15 +126,35 @@ public class GamePlayManager : MonoBehaviour {
 	//    }
 	//}
 
-	private bool IsAdAvailable()
+
+	public void OpenStore()
+	{
+		store.SetActive(true);
+	}
+    public void HideStore()
+    {
+        store.SetActive(false);
+    }
+    private bool IsAdAvailable()
 	{
 		//if (AdmobController.instance.rewardBasedVideo == null) return false;
 		//bool isLoaded = AdmobController.instance.rewardBasedVideo.IsLoaded();
 		//return isLoaded;
 		return false;
 	}
+    public void ShowMessage()
+    {
+       
+        notification.SetActive(true);
+        StartCoroutine(HideAfterDelay(1f)); // 1 giây
+    }
 
-	private void OnDisable()
+    IEnumerator HideAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        notification.SetActive(false);
+    }
+    private void OnDisable()
     {
 #if UNITY_ANDROID || UNITY_IOS
         //if (AdmobController.instance.rewardBasedVideo != null)
@@ -139,11 +165,20 @@ public class GamePlayManager : MonoBehaviour {
 #endif
     }
 
+
+	
+
     public void startGame()
 	{
 		GameManager.score = 0;
 		GameManager.Stage = 1;
 		GameManager.isGameOver = false;
+		int coin = DBManager.GetCurrency("coin");
+		if(coin <=0)
+		{
+			return;
+		}
+		DBManager.SetCurrency("coin", coin - 1);
 		usedAdContinue = false;
 		if (isDebug) {
 			GameManager.Stage = cLevel;
@@ -240,15 +275,18 @@ public class GamePlayManager : MonoBehaviour {
 				totalSpawnKnife++;
 				GameObject tempKnife;
 				if (GameManager.selectedKnifePrefab == null) {
+					//tempKnife = Instantiate<Knife> (knifePrefab, new Vector3 (KnifeSpawnPoint.position.x, KnifeSpawnPoint.position.y - 2f, KnifeSpawnPoint.position.z), Quaternion.identity, KnifeSpawnPoint).gameObject;
 					tempKnife = Instantiate<Knife> (knifePrefab, new Vector3 (KnifeSpawnPoint.position.x, KnifeSpawnPoint.position.y - 2f, KnifeSpawnPoint.position.z), Quaternion.identity, KnifeSpawnPoint).gameObject;
 				} else {
+					//tempKnife = Instantiate<Knife> (GameManager.selectedKnifePrefab, new Vector3 (KnifeSpawnPoint.position.x, KnifeSpawnPoint.position.y - 2f, KnifeSpawnPoint.position.z), Quaternion.identity, KnifeSpawnPoint).gameObject;
 					tempKnife = Instantiate<Knife> (GameManager.selectedKnifePrefab, new Vector3 (KnifeSpawnPoint.position.x, KnifeSpawnPoint.position.y - 2f, KnifeSpawnPoint.position.z), Quaternion.identity, KnifeSpawnPoint).gameObject;
 			
 				}
-				tempKnife.transform.localScale = Vector3.one;
+				//tempKnife.transform.localScale = Vector3.one;
 				float knifeScale = (GameManager.ScreenHeight * knifeHeightByScreen) / tempKnife.GetComponent<SpriteRenderer> ().bounds.size.y;
-				tempKnife.transform.localScale = Vector3.one * knifeScale;
-				LeanTween.moveLocalY (tempKnife, 0, 0.1f);
+			//tempKnife.transform.localScale = Vector3.one * knifeScale;
+           tempKnife.transform.localScale = new Vector3(0.65f, 0.65f, 0.65f);
+            LeanTween.moveLocalY (tempKnife, 0, 0.1f);
 				tempKnife.name ="Knife"+totalSpawnKnife; 
 				currentKnife = tempKnife.GetComponent<Knife> ();
 			}
@@ -359,14 +397,20 @@ public class GamePlayManager : MonoBehaviour {
 	}
 	public void RestartGame()
 	{
-		SoundManager.instance.PlaybtnSfx ();
+        int coin = DBManager.GetCurrency("coin");
+        if (coin <= 0)
+        {
+            ShowMessage();
+            return;
+        }
+        SoundManager.instance.PlaybtnSfx ();
 		GeneralFunction.intance.LoadSceneByName ("GameScene");
 	}
 	public void BackToHome()
 	{
 		SoundManager.instance.PlaybtnSfx ();
-		GeneralFunction.intance.LoadSceneByName ("HomeScene");
-	}
+        SceneManager.LoadScene("HomeScene");
+    }
 	public void FBClick()
 	{
 		SoundManager.instance.PlaybtnSfx ();

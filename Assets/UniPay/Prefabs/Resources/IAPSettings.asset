@@ -13,27 +13,91 @@ MonoBehaviour:
   m_Name: IAPSettings
   m_EditorClassIdentifier: 
   categoryList:
-  - referenceID: e8e2898e-356b-4257-87cd-59ffb1fcb01b
-    ID: Blade_Breaker
+  - referenceID: 2e3026a2-084f-46a5-a752-23648811c012
+    ID: coin
     storeIDs: []
   currencyList:
-  - referenceID: 220be08c-be6d-4e63-a0c7-48b629257b77
-    ID: apple
-    baseAmount: 0
+  - referenceID: db4a608b-547c-4eba-ac2e-fc8d91ee983d
+    ID: coin
+    baseAmount: 3
     maxAmount: 0
-    icon: {fileID: 21300000, guid: d0d8df4e4ccca3241b02b506cf91be59, type: 3}
+    icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
   productList:
-  - referenceID: be3a1a40-e0bd-4c5d-836c-f0821caead7d
-    ID: iap_pack_1
+  - referenceID: 21e74703-21dd-4f14-8d67-74f294b62ba4
+    ID: product_item_1
     storeIDs: []
     category:
-      rid: 3732709018649493575
+      rid: 4159471455793578044
     type: 0
-    title: apple x10
-    description: 
+    title: Coin x2
+    description: Includes x2 Coin
     discount: 0
     fetch: 1
-    icon: {fileID: 21300000, guid: 52136ced1ff38eb4d9fa9552e878c99d, type: 3}
+    icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 0.19$
+    rewardList:
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 2
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: 563804b9-a5c2-4197-9f50-1efb72d95d7b
+    ID: product_item_2
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 0
+    title: Coin x4
+    description: Includes x4 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 0.29$
+    rewardList:
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 4
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: fc4bcaf0-b838-42d9-9dd3-3596c9455cbd
+    ID: product_item_3
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 0
+    title: Coin x6
+    description: Includes x6 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
     priceList:
     - type: 0
       currency:
@@ -45,27 +109,27 @@ MonoBehaviour:
     rewardList:
     - type: 1
       currency:
-        rid: 3732709018649493576
+        rid: 4159471455793578045
       product:
         rid: -2
-      amount: 10
+      amount: 6
       realPrice: 
     requirement:
       pairs: []
       label: 
     nextUpgrade:
       rid: -2
-  - referenceID: a16d74b7-5ae9-488a-be6c-683fa63c92fd
-    ID: iap_pack_2
+  - referenceID: 505cbfb4-377c-4e2b-9c75-951eb44b8adc
+    ID: product_item_4
     storeIDs: []
     category:
-      rid: 3732709018649493575
+      rid: 4159471455793578044
     type: 0
-    title: apple x20
-    description: 
+    title: Coin x8
+    description: Includes x8 Coin
     discount: 0
     fetch: 1
-    icon: {fileID: 21300000, guid: 52136ced1ff38eb4d9fa9552e878c99d, type: 3}
+    icon: {fileID: 21300000, guid: db9785cfd5c0947f29fa7f00677f7b67, type: 3}
     priceList:
     - type: 0
       currency:
@@ -77,27 +141,27 @@ MonoBehaviour:
     rewardList:
     - type: 1
       currency:
-        rid: 3732709018649493576
+        rid: 4159471455793578045
       product:
         rid: -2
-      amount: 20
+      amount: 8
       realPrice: 
     requirement:
       pairs: []
       label: 
     nextUpgrade:
       rid: -2
-  - referenceID: 77cbabd6-0785-4d16-88d4-dd1e77cf4455
-    ID: iap_pack_3
+  - referenceID: bb613637-845c-43bd-b3ef-d10433afd3cc
+    ID: product_item_5
     storeIDs: []
     category:
-      rid: 3732709018649493575
+      rid: 4159471455793578044
     type: 0
-    title: apple x40
-    description: 
+    title: Coin x10
+    description: Includes x10 Coin
     discount: 0
     fetch: 1
-    icon: {fileID: 21300000, guid: 52136ced1ff38eb4d9fa9552e878c99d, type: 3}
+    icon: {fileID: 21300000, guid: db9785cfd5c0947f29fa7f00677f7b67, type: 3}
     priceList:
     - type: 0
       currency:
@@ -109,59 +173,27 @@ MonoBehaviour:
     rewardList:
     - type: 1
       currency:
-        rid: 3732709018649493576
+        rid: 4159471455793578045
       product:
         rid: -2
-      amount: 40
+      amount: 10
       realPrice: 
     requirement:
       pairs: []
       label: 
     nextUpgrade:
       rid: -2
-  - referenceID: dbf7aeb9-5b97-4d9d-9d06-84605329b838
-    ID: iap_pack_4
+  - referenceID: 1e93ad95-0ca8-4dfe-856b-d327271fb4b2
+    ID: product_item_6
     storeIDs: []
     category:
-      rid: 3732709018649493575
+      rid: 4159471455793578044
     type: 0
-    title: apple x60
-    description: 
+    title: Coin x12
+    description: Includes x12 Coin
     discount: 0
     fetch: 1
-    icon: {fileID: 21300000, guid: 52136ced1ff38eb4d9fa9552e878c99d, type: 3}
-    priceList:
-    - type: 0
-      currency:
-        rid: -2
-      product:
-        rid: -2
-      amount: 0
-      realPrice: 2.99$
-    rewardList:
-    - type: 1
-      currency:
-        rid: 3732709018649493576
-      product:
-        rid: -2
-      amount: 60
-      realPrice: 
-    requirement:
-      pairs: []
-      label: 
-    nextUpgrade:
-      rid: -2
-  - referenceID: fd7c0949-d690-4b97-9e6a-ca82e4d8f716
-    ID: iap_pack_5
-    storeIDs: []
-    category:
-      rid: 3732709018649493575
-    type: 0
-    title: apple x120
-    description: 
-    discount: 0
-    fetch: 1
-    icon: {fileID: 21300000, guid: 52136ced1ff38eb4d9fa9552e878c99d, type: 3}
+    icon: {fileID: 21300000, guid: c5748bb46b1e34d40b8c886f5dce61dd, type: 3}
     priceList:
     - type: 0
       currency:
@@ -173,27 +205,59 @@ MonoBehaviour:
     rewardList:
     - type: 1
       currency:
-        rid: 3732709018649493576
+        rid: 4159471455793578045
       product:
         rid: -2
-      amount: 120
+      amount: 12
       realPrice: 
     requirement:
       pairs: []
       label: 
     nextUpgrade:
       rid: -2
-  - referenceID: 2769adcb-84f3-44b7-b53a-c381d6eeff87
-    ID: iap_pack_6
+  - referenceID: 8a20b8c1-b99f-4bce-85c0-c08adba45520
+    ID: product_item_7
     storeIDs: []
     category:
-      rid: 3732709018649493575
+      rid: 4159471455793578044
     type: 0
-    title: apple x250
-    description: 
+    title: Coin x14
+    description: Includes x14 Coin
     discount: 0
     fetch: 1
-    icon: {fileID: 21300000, guid: 52136ced1ff38eb4d9fa9552e878c99d, type: 3}
+    icon: {fileID: 21300000, guid: 68b3451e27ece0849bf61fd23531ea9c, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 7.99$
+    rewardList:
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 14
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: 20a40533-b245-4bb9-b245-22513c0e6b1a
+    ID: product_item_8
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 0
+    title: Coin x16
+    description: Includes x16 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: 9139f2d8c68e8f54e9b1f81c3190cec5, type: 3}
     priceList:
     - type: 0
       currency:
@@ -205,27 +269,261 @@ MonoBehaviour:
     rewardList:
     - type: 1
       currency:
-        rid: 3732709018649493576
+        rid: 4159471455793578045
       product:
         rid: -2
-      amount: 250
+      amount: 16
       realPrice: 
     requirement:
       pairs: []
       label: 
     nextUpgrade:
       rid: -2
-  - referenceID: 58b17a00-b334-45a5-b426-0b9a940e2e8d
-    ID: iap_pack_7
+  - referenceID: 94afb519-92f1-44f5-b7bb-06bc1d95ba09
+    ID: sub_pack_1
     storeIDs: []
     category:
-      rid: 3732709018649493575
-    type: 0
-    title: apple x500
-    description: 
+      rid: 4159471455793578044
+    type: 2
+    title: Subscription pack 1
+    description: Includes x1 Coin
     discount: 0
     fetch: 1
-    icon: {fileID: 21300000, guid: 52136ced1ff38eb4d9fa9552e878c99d, type: 3}
+    icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 1.99$
+    rewardList:
+    - type: 2
+      currency:
+        rid: -2
+      product:
+        rid: 4159471455793578046
+      amount: 1
+      realPrice: 
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 1
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: fb6a6d6b-f914-4e73-b6a3-48e45090f29c
+    ID: sub_pack_2
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 2
+    title: Subscription pack 2
+    description: Includes x2 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 2.99$
+    rewardList:
+    - type: 2
+      currency:
+        rid: -2
+      product:
+        rid: 4159471455793578047
+      amount: 1
+      realPrice: 
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 2
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: aaaed099-9625-4703-87f9-2acba931db67
+    ID: sub_pack_3
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 2
+    title: Subscription pack 3
+    description: Includes x3 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 4.99$
+    rewardList:
+    - type: 2
+      currency:
+        rid: -2
+      product:
+        rid: 4159471455793578048
+      amount: 1
+      realPrice: 
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 3
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: 4deb331d-b760-41b2-aae2-1f30d37e19fb
+    ID: sub_pack_4
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 2
+    title: Subscription pack 4
+    description: Includes x4 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: db9785cfd5c0947f29fa7f00677f7b67, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 7.99$
+    rewardList:
+    - type: 2
+      currency:
+        rid: -2
+      product:
+        rid: 4159471455793578049
+      amount: 1
+      realPrice: 
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 4
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: a6b47ee1-ead9-48c2-b4dd-caaa5318341b
+    ID: sub_pack_5
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 2
+    title: Subscription pack 5
+    description: Includes x5 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: db9785cfd5c0947f29fa7f00677f7b67, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 9.99$
+    rewardList:
+    - type: 2
+      currency:
+        rid: -2
+      product:
+        rid: 4159471455793578050
+      amount: 1
+      realPrice: 
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 5
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: eddf121d-9044-447d-b203-4f9e76d8e09c
+    ID: sub_pack_6
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 2
+    title: Subscription pack 6
+    description: Includes x6 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: 68b3451e27ece0849bf61fd23531ea9c, type: 3}
+    priceList:
+    - type: 0
+      currency:
+        rid: -2
+      product:
+        rid: -2
+      amount: 0
+      realPrice: 14.99$
+    rewardList:
+    - type: 2
+      currency:
+        rid: -2
+      product:
+        rid: 4159471455793578051
+      amount: 1
+      realPrice: 
+    - type: 1
+      currency:
+        rid: 4159471455793578045
+      product:
+        rid: -2
+      amount: 6
+      realPrice: 
+    requirement:
+      pairs: []
+      label: 
+    nextUpgrade:
+      rid: -2
+  - referenceID: 0ce15590-e2f8-4697-b3ad-c8456cdf5c54
+    ID: sub_pack_7
+    storeIDs: []
+    category:
+      rid: 4159471455793578044
+    type: 2
+    title: Subscription pack 7
+    description: Includes x7 Coin
+    discount: 0
+    fetch: 1
+    icon: {fileID: 21300000, guid: 9139f2d8c68e8f54e9b1f81c3190cec5, type: 3}
     priceList:
     - type: 0
       currency:
@@ -235,12 +533,19 @@ MonoBehaviour:
       amount: 0
       realPrice: 19.99$
     rewardList:
+    - type: 2
+      currency:
+        rid: -2
+      product:
+        rid: 4159471455793578052
+      amount: 1
+      realPrice: 
     - type: 1
       currency:
-        rid: 3732709018649493576
+        rid: 4159471455793578045
       product:
         rid: -2
-      amount: 500
+      amount: 7
       realPrice: 
     requirement:
       pairs: []
@@ -262,17 +567,311 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3732709018649493575
+    - rid: 4159471455793578044
       type: {class: IAPCategory, ns: UniPay, asm: Assembly-CSharp}
       data:
-        referenceID: e8e2898e-356b-4257-87cd-59ffb1fcb01b
-        ID: Blade_Breaker
+        referenceID: 2e3026a2-084f-46a5-a752-23648811c012
+        ID: coin
         storeIDs: []
-    - rid: 3732709018649493576
+    - rid: 4159471455793578045
       type: {class: IAPCurrency, ns: UniPay, asm: Assembly-CSharp}
       data:
-        referenceID: 220be08c-be6d-4e63-a0c7-48b629257b77
-        ID: apple
-        baseAmount: 0
+        referenceID: db4a608b-547c-4eba-ac2e-fc8d91ee983d
+        ID: coin
+        baseAmount: 3
         maxAmount: 0
-        icon: {fileID: 21300000, guid: d0d8df4e4ccca3241b02b506cf91be59, type: 3}
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+    - rid: 4159471455793578046
+      type: {class: IAPProduct, ns: UniPay, asm: Assembly-CSharp}
+      data:
+        referenceID: 94afb519-92f1-44f5-b7bb-06bc1d95ba09
+        ID: sub_pack_1
+        storeIDs: []
+        category:
+          rid: 4159471455793578044
+        type: 2
+        title: Subscription pack 1
+        description: Includes x2 Coin
+        discount: 0
+        fetch: 1
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+        priceList:
+        - type: 0
+          currency:
+            rid: -2
+          product:
+            rid: -2
+          amount: 0
+          realPrice: 1.99$
+        rewardList:
+        - type: 2
+          currency:
+            rid: -2
+          product:
+            rid: 4159471455793578046
+          amount: 1
+          realPrice: 
+        - type: 1
+          currency:
+            rid: 4159471455793578045
+          product:
+            rid: -2
+          amount: 2
+          realPrice: 
+        requirement:
+          pairs: []
+          label: 
+        nextUpgrade:
+          rid: -2
+    - rid: 4159471455793578047
+      type: {class: IAPProduct, ns: UniPay, asm: Assembly-CSharp}
+      data:
+        referenceID: fb6a6d6b-f914-4e73-b6a3-48e45090f29c
+        ID: sub_pack_2
+        storeIDs: []
+        category:
+          rid: 4159471455793578044
+        type: 2
+        title: Subscription pack 2
+        description: Includes x3 Coin
+        discount: 0
+        fetch: 1
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+        priceList:
+        - type: 0
+          currency:
+            rid: -2
+          product:
+            rid: -2
+          amount: 0
+          realPrice: 2.99$
+        rewardList:
+        - type: 2
+          currency:
+            rid: -2
+          product:
+            rid: 4159471455793578047
+          amount: 1
+          realPrice: 
+        - type: 1
+          currency:
+            rid: 4159471455793578045
+          product:
+            rid: -2
+          amount: 3
+          realPrice: 
+        requirement:
+          pairs: []
+          label: 
+        nextUpgrade:
+          rid: -2
+    - rid: 4159471455793578048
+      type: {class: IAPProduct, ns: UniPay, asm: Assembly-CSharp}
+      data:
+        referenceID: aaaed099-9625-4703-87f9-2acba931db67
+        ID: sub_pack_3
+        storeIDs: []
+        category:
+          rid: 4159471455793578044
+        type: 2
+        title: Subscription pack 3
+        description: Includes x4 Coin
+        discount: 0
+        fetch: 1
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+        priceList:
+        - type: 0
+          currency:
+            rid: -2
+          product:
+            rid: -2
+          amount: 0
+          realPrice: 4.99$
+        rewardList:
+        - type: 2
+          currency:
+            rid: -2
+          product:
+            rid: 4159471455793578048
+          amount: 1
+          realPrice: 
+        - type: 1
+          currency:
+            rid: 4159471455793578045
+          product:
+            rid: -2
+          amount: 4
+          realPrice: 
+        requirement:
+          pairs: []
+          label: 
+        nextUpgrade:
+          rid: -2
+    - rid: 4159471455793578049
+      type: {class: IAPProduct, ns: UniPay, asm: Assembly-CSharp}
+      data:
+        referenceID: 4deb331d-b760-41b2-aae2-1f30d37e19fb
+        ID: sub_pack_4
+        storeIDs: []
+        category:
+          rid: 4159471455793578044
+        type: 2
+        title: Subscription pack 4
+        description: Includes x5 Coin
+        discount: 0
+        fetch: 1
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+        priceList:
+        - type: 0
+          currency:
+            rid: -2
+          product:
+            rid: -2
+          amount: 0
+          realPrice: 7.99$
+        rewardList:
+        - type: 2
+          currency:
+            rid: -2
+          product:
+            rid: 4159471455793578049
+          amount: 1
+          realPrice: 
+        - type: 1
+          currency:
+            rid: 4159471455793578045
+          product:
+            rid: -2
+          amount: 5
+          realPrice: 
+        requirement:
+          pairs: []
+          label: 
+        nextUpgrade:
+          rid: -2
+    - rid: 4159471455793578050
+      type: {class: IAPProduct, ns: UniPay, asm: Assembly-CSharp}
+      data:
+        referenceID: a6b47ee1-ead9-48c2-b4dd-caaa5318341b
+        ID: sub_pack_5
+        storeIDs: []
+        category:
+          rid: 4159471455793578044
+        type: 2
+        title: Subscription pack 5
+        description: Includes x6 Coin
+        discount: 0
+        fetch: 1
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+        priceList:
+        - type: 0
+          currency:
+            rid: -2
+          product:
+            rid: -2
+          amount: 0
+          realPrice: 9.99$
+        rewardList:
+        - type: 2
+          currency:
+            rid: -2
+          product:
+            rid: 4159471455793578050
+          amount: 1
+          realPrice: 
+        - type: 1
+          currency:
+            rid: 4159471455793578045
+          product:
+            rid: -2
+          amount: 6
+          realPrice: 
+        requirement:
+          pairs: []
+          label: 
+        nextUpgrade:
+          rid: -2
+    - rid: 4159471455793578051
+      type: {class: IAPProduct, ns: UniPay, asm: Assembly-CSharp}
+      data:
+        referenceID: eddf121d-9044-447d-b203-4f9e76d8e09c
+        ID: sub_pack_6
+        storeIDs: []
+        category:
+          rid: 4159471455793578044
+        type: 2
+        title: Subscription pack 6
+        description: Includes x7 Coin
+        discount: 0
+        fetch: 1
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+        priceList:
+        - type: 0
+          currency:
+            rid: -2
+          product:
+            rid: -2
+          amount: 0
+          realPrice: 14.99$
+        rewardList:
+        - type: 2
+          currency:
+            rid: -2
+          product:
+            rid: 4159471455793578051
+          amount: 1
+          realPrice: 
+        - type: 1
+          currency:
+            rid: 4159471455793578045
+          product:
+            rid: -2
+          amount: 7
+          realPrice: 
+        requirement:
+          pairs: []
+          label: 
+        nextUpgrade:
+          rid: -2
+    - rid: 4159471455793578052
+      type: {class: IAPProduct, ns: UniPay, asm: Assembly-CSharp}
+      data:
+        referenceID: 0ce15590-e2f8-4697-b3ad-c8456cdf5c54
+        ID: sub_pack_7
+        storeIDs: []
+        category:
+          rid: 4159471455793578044
+        type: 2
+        title: Subscription pack 7
+        description: Includes x8 Coin
+        discount: 0
+        fetch: 1
+        icon: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+        priceList:
+        - type: 0
+          currency:
+            rid: -2
+          product:
+            rid: -2
+          amount: 0
+          realPrice: 19.99$
+        rewardList:
+        - type: 2
+          currency:
+            rid: -2
+          product:
+            rid: 4159471455793578052
+          amount: 1
+          realPrice: 
+        - type: 1
+          currency:
+            rid: 4159471455793578045
+          product:
+            rid: -2
+          amount: 8
+          realPrice: 
+        requirement:
+          pairs: []
+          label: 
+        nextUpgrade:
+          rid: -2

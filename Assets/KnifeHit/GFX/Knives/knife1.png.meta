@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      knife1_0: -8585084602896689993
+      knife1_1: -114350311797289055
+      knife1_10: -4863896599141676764
+      knife1_11: 5203917350792779782
+      knife1_12: -8884270173283229503
+      knife1_13: -292630086440529172
+      knife1_2: 2696735542013048372
+      knife1_3: -3100337544334197561
+      knife1_4: -6875363826879412922
+      knife1_5: -4155021739936085118
+      knife1_6: -2041805232063418537
+      knife1_7: -5497281511797490020
+      knife1_8: -421858352719983788
+      knife1_9: -2447144037777747379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

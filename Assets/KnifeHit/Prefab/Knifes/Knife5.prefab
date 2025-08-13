@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 50250858168613248}
   - component: {fileID: 212589367417689246}
   - component: {fileID: 114870801287059610}
-  - component: {fileID: 61281104014548938}
+  - component: {fileID: -6744798459117812257}
   m_Layer: 0
   m_Name: Knife5
   m_TagString: Knife
@@ -74,7 +74,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46, y: 2.43}
+    oldSize: {x: 0.6, y: 2.56}
     newSize: {x: 0.58, y: 2.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: -1748793481
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe311ac78883a214cb4b781663277529, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74a4687e0624ebb48aadd0c222c9b67c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,9 +180,9 @@ MonoBehaviour:
   isFire: 0
   isHitted: 0
   rb: {fileID: 0}
-  knifeHitsfx: {fileID: 8300000, guid: d353294c9b4d6f440978483337467c19, type: 3}
+  knifeHitsfx: {fileID: 8300000, guid: 2f45382db1bdd4b41b030e4ea9e02ed0, type: 3}
   ThrowKnifeSfx: {fileID: 8300000, guid: 942507b12a821dc4fb304ddffc7f7ad2, type: 3}
---- !u!61 &61281104014548938
+--- !u!61 &-6744798459117812257
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,15 +216,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.012314498, y: -0.7118015}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46, y: 2.43}
+    oldSize: {x: 0.6, y: 2.56}
     newSize: {x: 0.58, y: 2.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.42, y: 0.11985397}
+  m_Size: {x: 0.3, y: 0.079}
   m_EdgeRadius: 0

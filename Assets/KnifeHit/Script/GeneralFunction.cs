@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UniPay;
 
 public class GeneralFunction : MonoBehaviour {
 
@@ -25,7 +26,9 @@ public class GeneralFunction : MonoBehaviour {
 	}
 	void Update()
 	{
-		if (Input.GetKeyUp (KeyCode.Escape)) {
+		appleLbl.text = DBManager.GetCurrency("coin") + "";
+
+        if (Input.GetKeyUp (KeyCode.Escape)) {
 				if((Time.time-EscTime) < 3f)
 				{
 					Application.Quit ();

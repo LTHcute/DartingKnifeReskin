@@ -371,7 +371,7 @@ namespace UniPay
         public static int GetCurrency(string currencyID)
         {
             int value = 0;
-
+         //   Debug.Log(currencyID);
             //check whether currency actually exists
             if (instance.gameData[currencyKey].Count == 0)
                 Debug.LogWarning("Couldn't get funds, no currency specified or empty inventory.");
@@ -410,6 +410,7 @@ namespace UniPay
         /// </summary>
         public static int AddCurrency(string currencyID, int amount)
         {
+            Debug.Log("Amoutn:"+ amount);
             IAPCurrency currency = IAPManager.GetInstance().asset.currencyList.Find(x => x.ID == currencyID);
             if (currency == null) return 0;
 
